@@ -36,3 +36,23 @@ int main(){
 // expression 값을 evaluation한 결과값을 var값을 저장한다.
 // 수식 : a + b , var , 1 다 수식임
 // LHS(Letf Hand Side)  RHS(Right Hand Side)
+
+// gdb 명령어
+// l : 10줄 읽음
+// r : run 실행시킴
+// b 7 : break point at 7 7번라인에서 멈추도록 만듬
+// 다시 run 하면 거기서 멈춤
+// p : print , p var 하면 var의 내용이 나옴
+// 즉, b 7 을 하면 7번라인을 수앵하지 않는다는 말
+// n : 한 줄을 실행함
+// p var 하면 97 'a'라고 출력됨 97은 메모리의 숫자
+// p &var : 그 변수의 주소값을 프린트함
+// c : continue 현재 멈춘 부분부터 프로그램을 수행함
+// q : quit gdb를 끝냄
+
+// 뱐수선언 : 자료형 변수이름;
+// 변수선언의 예 : int 김영희 , char 'a' , 등등
+// 식별자 알파벳, 숫자, 밑줄문자로 구성
+// 첫 문자는 무족건 알파벳 또는 밑줄문자
+// 대문자 소문자 구별함
+// C언어의 키워드와 똑같으면 허용 안됨
