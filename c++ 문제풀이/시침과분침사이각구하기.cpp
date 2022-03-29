@@ -20,7 +20,7 @@ int angleClock(int h, int m) {
   }
 
   if (ang > 180){
-    return (ang-180);
+    return (360 - ang);
   }
   else  {
     return ang;
