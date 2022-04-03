@@ -1,24 +1,23 @@
-#include<iostream>
-using namespace std;int main(int argc, char const *argv[]) {
-    int i, j, x, y, max, min, a;
+#include <iostream>
+using namespace std;
+
+int x, y, mx, mn, a;
+
+int main() {
     cin >> x;
-    for(i=0;i<x;i++) {
-      cin >> y;
 
-      cin >> a;
-      max =min = a;
+    for(int i = 0; i < x; i++) {
+        cin >> y >> a;
 
-      for(j=1;j<y;j++) {
-        cin >> a;
-        if(a > max){
-          max = a;
+        mx = mn = a;
+
+        for(int j = 1; j < y; j++) {
+            cin >> a;
+            
+            mx = max(mx, a);
+            mn = min(mn, a);
         }
-        if(a < min){
-          min = a;
-        }
-
-      }
-      cout << max <<" " << min << endl;
+        cout << mx << " " << mn << "\n";
     }
-  return 0;
+    return 0;
 }

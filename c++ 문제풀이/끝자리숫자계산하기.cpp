@@ -2,20 +2,20 @@
 using namespace std;
 
 int main() {
-    int a, i, j, x, y;
+    int a, x, y;
  
     cin >> x;
-    for (i=0; i<x; i++) {
-        cin >> y;
-        int times = 1;
 
-        for(j=0; j<y; j++) {
+    while(x--) {
+        cin >> y;
+        int ans = 1;
+
+        while(y--) {
             cin >> a;
             a %= 10;
-            times *= a;
-            times %= 10;
+            ans = (ans * a) % 10;
         }
-        cout << times << endl;
+        cout << ans << "\n";
     }       
     return 0;
 }

@@ -1,28 +1,23 @@
 #include <iostream>
 using namespace std;
-int angleClock(int h, int m);
-int main(void)
-{
-int t;
-int h, m;
+
+int angleClock(double h, double m);
+
+int main(void) {
+    int t;
+    double h, m;
+
     cin >> t;
-    for(int i=0; i<t; i++)
-{
+
+    while(t--) {
         cin >> h >> m;
-        cout << angleClock( h, m ) << endl;
+        cout << angleClock(h, m) << "\n";
     }
     return 0;
 }
-int angleClock(int h, int m) {
-  double ang = (30*(double)h -5.5*(double)m);
-  if (ang <0){
-    ang = -ang;
-  }
 
-  if (ang > 180){
-    return (360 - ang);
-  }
-  else  {
-    return ang;
-  }
+int angleClock(double h, double m) {
+    double ang = abs(30 * h - 5.5 * m);
+
+    return ang > 180 ? 360 - ang : ang;
 }

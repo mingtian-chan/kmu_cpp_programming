@@ -2,29 +2,36 @@
 #include <cmath>
 using namespace std;
 
-int main(int argc, char const *argv[]) {
-    int i, j, k, n, x, sum, num, tmp;    
+int getDigit(int num) {
+    int ret = 0;
+
+    while(num > 0) {
+        num /=10;
+        ret++;
+    }
+
+    return ret;
+}
+
+int main() {
+    int j, k, n, x, sum, num;    
+
     cin >> x;
-    for (i=0; i<x; i++){
+
+    while(x--) {
         cin >> num;
-        tmp = num;
+
         n = num;
-        k = 0;
-        sum = 0;
-        while (tmp >0){
-            tmp = (tmp/10);
-            k += 1;
+        k = sum = 0;
+
+        k = getDigit(num);
+
+        for (j = 0; j < k; j++) {
+            sum += pow(n % 10, k);
+            n /= 10;
         }
-        for (j=0; j<k;j++) {
-            sum += pow(n%10,k);
-            n = n /10;
-        }
-        if (num == sum){
-            cout << 1 << endl;
-        }
-        else{
-            cout << 0 << endl;
-        }
+
+        cout << (num == sum ? 1 : 0) << "\n";
     }   
     return 0;
 }
