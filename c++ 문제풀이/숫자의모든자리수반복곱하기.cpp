@@ -1,12 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int getAns(int num) {
-    int ret;
-    int ans = -1;
+long long getAns(long long num) {
+    long long ret;
 
     do {
-        cout << "num : " << num << "\n";
         ret = 1;
         while (num > 0) {
             if (num % 10 == 0){
@@ -15,20 +13,16 @@ int getAns(int num) {
                 }
             ret *= num % 10;
             num /= 10;
-
-        cout << "ret : " << ret << "\n";
         }
         num = ret;
 
-    ans = num;
-    }
-    while (ret > 9);
+    } while (ret > 9);
 
-    return ans; // ans 가 -1이 나오면 뭔가 잘못 된 거임. 
+    return num;
 }
 
 int main(){
-    int x, num;
+    long long x, num;
     cin >> x;
     while(x--){
         cin >> num;
