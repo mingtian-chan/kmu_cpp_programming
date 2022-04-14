@@ -17,12 +17,14 @@ int main() {
         // cout << tmpx << endl;
         tmpy = max((min(aqy,bqy) - max(apy,bpy)),0);
         // cout << tmpy << endl;
-        if (tmpx ==0 || tmpy == 0)
+        if (tmpx ==0 || tmpy == 0){
             tmpx = 0;
             tmpy = 0;
+            }  // 여기 중괄호 안 넣어서 틀림
 
 
         area = (aqx - apx) * (aqy - apy) + (bqx - bpx) * (bqy - bpy) - tmpx * tmpy;
+        // cout << area << tmpx << tmpy << endl;
         round =  2*((aqx - apx) + (aqy - apy) + (bqx - bpx) + (bqy - bpy)) - 2 * tmpx - 2 * tmpy;
         cout << area << " " << round << "\n";
         tmpx = 0;

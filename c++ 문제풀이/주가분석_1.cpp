@@ -11,11 +11,15 @@ int main() {
         cin >> input;
         tmp_old = tmp_mid = tmp_new = input;
         t--;
+        // tmp_old = tmp_mid = tmp_new = 0;
+
         while(t--){
             // cout << tmp_old << " " << tmp_mid << " " << tmp_new << "\n";
             cin >> input;
-            if (input == tmp_mid)
+            if (input == tmp_new){
+                // cout << "while 실행" << "\n";
                 continue; // 같은 값을 넣으면 다음 input으로 넘어감
+            }
             if (tmp_mid == tmp_new){
                 tmp_mid = tmp_new;
                 tmp_new = input;
@@ -26,10 +30,11 @@ int main() {
                 tmp_new = input;
             }
                 
-            if ((tmp_old < tmp_mid) && (tmp_new < tmp_mid))
+            if ((tmp_old < tmp_mid) && (tmp_new < tmp_mid)){
                 cnt++;
             // cout << tmp_old << " " << tmp_mid << " " << tmp_new << "\n";                
             // cout << "cnt : " << cnt << "\n";
+            }
 
         } 
         cout << cnt << "\n";

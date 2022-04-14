@@ -6,7 +6,6 @@ int arr[1000][1000];  // 미리 큰 베이스 배열을 만들고
 int main() {
     int a, b, i, j, n, idx, cnt;
     
-
     int t;
 
     cin >> t;
