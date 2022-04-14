@@ -9,7 +9,7 @@ int main() {
     while (T--) {
 
 
-        cin >> apx >> apy >> aqx >> aqy >> bpx >> bpy >> bqx >> bqy;
+        cin >> apx >> apy >> aqx >> aqy >> bpx >> bpy >> bqx >> bqy; // a사각형 p좌표 xy, q좌표 xy, b사각형 p좌표 xy, q좌표 xy
         // cout << apx << apy << aqx << aqy << bpx << bpy << bqx << bqy << endl;
         // cout << "minaqx"<< min(aqx,bqx) <<"maxqpx" << max(apx,bpx) << endl;
 
