@@ -17,8 +17,7 @@ public:
     bool operator== (const MyPoint& p) const;
     bool operator!= (const MyPoint& p) const;
     // utility functions
-    int dist2sqr(const MyPoint& p) const; // 직선거리(Euclidean distance)의 제곱을
-계산
+    int dist2sqr(const MyPoint& p) const; // 직선거리(Euclidean distance)의 제곱을 계산
     int dist1(const MyPoint& p) const;    // 직각거리(rectilinear distance)를 계산
 private:
     int x, y;
