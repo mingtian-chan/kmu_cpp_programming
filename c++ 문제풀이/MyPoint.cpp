@@ -1,15 +1,13 @@
 #include <cstdlib>
 #include "MyPoint.h"
 // constructors
-MyPoint::MyPoint ()
-:x(0), y(0)         // set default to origin (0,0)
+MyPoint::MyPoint () :x(0), y(0)         // set default to origin (0,0)
 {
 }
-MyPoint::MyPoint (int coordX, int coordY)
-:x(coordX), y(coordY)
+MyPoint::MyPoint (int coordX, int coordY) : x(coordX), y(coordY)
 {
 }
-MyPoint::MyPoint (const MyPoint& p)
+MyPoint::MyPoint (const MyPoint& p) : x(p.x), y(p.y)
 {
 }
 // accessor functions
@@ -32,7 +30,7 @@ void MyPoint::setY (int coordY)
 }
 bool MyPoint::operator== (const MyPoint& p) const
 {
-    return x = p.x && y == p.y;
+    return x == p.x && y == p.y;
 }
 bool MyPoint::operator!= (const MyPoint& p) const
 {
