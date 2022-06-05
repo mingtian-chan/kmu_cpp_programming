@@ -8,15 +8,15 @@ int main() {
     string s4 = "you";
 
     cout << "s1 : \"" << s1 << "\" size " << s1.size() << endl;
-    cout << "s1 : \"" << s2 << "\" size " << s2.size() << endl;
-    cout << "s1 : \"" << s3 << "\" size " << s3.size() << endl;
-    cout << "s1 : \"" << s4 << "\" size " << s4.size() << endl;
+    cout << "s2 : \"" << s2 << "\" size " << s2.size() << endl;
+    cout << "s3 : \"" << s3 << "\" size " << s3.size() << endl;
+    cout << "s4 : \"" << s4 << "\" size " << s4.size() << endl;
 
     s1 = s2 + " and " + s4;
     cout << "s1 : \"" << s1 << "\" size " << s1.size() << endl;
     s1.clear();
     cout << "s1 : \"" << s1 << "\" size " << s1.size() << endl;
-    cout << "is s1 empty? " << s1.empty << endl;
+    cout << "is s1 empty? " << s1.empty() << endl;
 
     s4[0] = 'Y';
     cout << "s4 : \"" << s1 << "\" size " << s4.size() << endl;
