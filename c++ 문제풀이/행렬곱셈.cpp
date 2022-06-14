@@ -11,8 +11,8 @@ int main() {
         int arr2 [b][c];
         int arr3 [a][c];
         int sum = 0;
-
         int input;
+
         for (int i = 0; i < a; i++){
             for (int j = 0; j < b; j++){
                 // cout << i << j << "\n";
